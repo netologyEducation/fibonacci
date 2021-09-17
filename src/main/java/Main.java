@@ -16,11 +16,5 @@ public class Main {
 
         client.start();
 
-        try {
-            server.join();
-            client.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }

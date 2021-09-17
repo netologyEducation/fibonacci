@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client implements Runnable{
+public class Client implements Runnable {
 
     private final int PORT;
     private final String HOST;
@@ -22,11 +22,11 @@ public class Client implements Runnable{
         }
 
         try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
-        Scanner scanner = new Scanner(System.in)){
+             PrintWriter out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
+             Scanner scanner = new Scanner(System.in)) {
 
             String msg;
-            while(true){
+            while (true) {
                 System.out.printf("Количество чисел Фибоначчи (для выхода введите - end): ");
                 msg = scanner.nextLine().trim();
                 out.println(msg);
